@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Desafio_MVT.views import familiares
+from Desafio_MVT.views import familiares, inicio
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('inicio/', inicio),
     path('familiares/<name>/<num_id>/<date_birth>', familiares),
 ]

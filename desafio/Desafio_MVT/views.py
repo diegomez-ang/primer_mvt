@@ -8,6 +8,14 @@ from Desafio_MVT.models import Familiares
 
 # Función familiares
 
+def inicio(request):
+    plantilla = loader.get_template('index.html')
+
+    documento = plantilla.render()
+    
+    return HttpResponse (documento)
+
+
 def familiares(request, name, num_id, date_birth):
     '''
     fam = Familiares(name = 'Flor Marina', num_id= 14562365, date_birth = '15/11/1954')
